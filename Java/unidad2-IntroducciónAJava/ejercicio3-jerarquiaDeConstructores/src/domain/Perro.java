@@ -7,9 +7,13 @@ public class Perro extends Animal {
 		super(nombreDelAnimal);//Usamos el constructor del 'padre'
 		this.raza = razaDelPerro;
 	}
-	
-	public String darRaza() {
-		return this.raza;
+
+	public String getRaza() {
+		return raza;
+	}
+
+	public void setRaza(String raza) {
+		this.raza = raza;
 	}
 	
 }
