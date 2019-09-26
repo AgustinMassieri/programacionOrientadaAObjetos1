@@ -13,6 +13,7 @@ public class Main {
 
 
 		Ave piopio = new Ave("Piopio", lugarTres);
+		System.out.println(piopio);
 		piopio.comer(10);
 		System.out.println(piopio.getEnergia());
 		System.out.println(piopio.volarAUnLugar(lugarCinco));

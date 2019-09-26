@@ -1,13 +1,40 @@
 package domain;
 
 public abstract class Animal {
-	private int peso;
-	private int energia;
+	protected int peso;
+	protected int energia;
+	protected int posicion;
 	
-	public Animal(int peso, int energia) {
-		
+	public abstract double obtenerVelocidad();
+	
+	public Animal(int peso, int posicion, int energia) {
+		this.energia = energia;
+		this.posicion = posicion;
+		this.peso = peso;
+	}
+
+	public int getPeso() {
+		return peso;
+	}
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+
+	public int getEnergia() {
+		return energia;
+	}
+
+	public void setEnergia(int energia) {
+		this.energia = energia;
 	}
 	
-	public abstract int obtenerVelocidad();
-	public abstract boolean correrAlAnimal();
+	public int getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(int posicion) {
+		this.posicion = posicion;
+	}
+	
 }
