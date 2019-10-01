@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ejercicio1-Piopio/src"/>
+	<classpathentry kind="src" path="ejercicio2-piopioMensajero/src"/>
+	<classpathentry kind="src" path="ejercicio3-elCoyoteYElCorrecaminos/src"/>
+	<classpathentry kind="src" path="ejercicio4-frodoElLoboBobo/src"/>
+	<classpathentry kind="src" path="ejercicio5-laDietaDePiopio/src"/>
+	<classpathentry kind="output" path="ejercicio1-Piopio/bin"/>
+</classpath>

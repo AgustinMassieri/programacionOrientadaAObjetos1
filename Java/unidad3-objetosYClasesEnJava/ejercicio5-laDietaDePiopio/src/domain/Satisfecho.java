@@ -7,4 +7,12 @@ public class Satisfecho extends Satisfaccion {
 		return "Satisfecho";
 	}
 	
+	public boolean estaActivo(){
+		return true;
+	}
+	
+	public boolean noEstaActivo(){
+		return false;
+	}
+	
 }

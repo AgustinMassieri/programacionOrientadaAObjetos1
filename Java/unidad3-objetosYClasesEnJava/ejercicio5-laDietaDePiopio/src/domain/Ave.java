@@ -7,19 +7,8 @@ public class Ave {
 	private Estado digestion;
 	
 	public Ave(String nombre){
-		energia = 100;
-		this.nombre = nombre;
-		
-		if(energia > 100)
-			digestion = new Empachado();
-		else
-			digestion = new Digesto();
-		
-		if(energia > 50 && energia < 100)
-			satisfaccion = new Satisfecho();
-		else
-			satisfaccion = new Insatisfecho();
-		
+		setEnergia(100);
+		this.nombre = nombre;	
 	}
 	
 	@Override //Se pone siempre y cuando redefinamos. Se optimiza compilacion
@@ -101,12 +90,12 @@ public class Ave {
 			setEnergia(nuevaEnergia);
 	}
 	
-	public boolean tenesHambre() {
+	public boolean hayhambre(){
 		
-		if( satisfaccion instanceof Insatisfecho && digestion instanceof Indigesto)
-			return false;
-		else
+		if( satisfaccion.noEstaActivo() && digestion.noEstaActivo() )
 			return true;
+		else
+			return false;
 		
 	}
 	

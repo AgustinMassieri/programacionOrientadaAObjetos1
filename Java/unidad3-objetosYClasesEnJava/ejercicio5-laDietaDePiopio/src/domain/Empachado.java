@@ -7,4 +7,12 @@ public class Empachado extends Digestion {
 		return "Empachado";
 	}
 	
+	public boolean estaActivo(){
+		return true;
+	}
+	
+	public boolean noEstaActivo(){
+		return false;
+	}
+	
 }

@@ -7,5 +7,13 @@ public class Indigesto extends Digestion {
 	public String toString() {
 		return "Indigesto";
 	}
+	
+	public boolean estaActivo(){
+		return false;
+	}
+	
+	public boolean noEstaActivo(){
+		return true;
+	}
 
 }

@@ -1,3 +1,3 @@
 package domain;
 
-public abstract class Satisfaccion extends Estado {}
+public abstract class Satisfaccion extends Estado {	}

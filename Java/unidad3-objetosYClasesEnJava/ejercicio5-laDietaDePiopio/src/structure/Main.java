@@ -3,7 +3,6 @@ package structure;
 import domain.*;
 
 public class Main {
-
 	public static void main(String[] args) {
 		Ave piopio = new Ave("Piopio");
 		Pez nemo = new Pez(4);
@@ -17,8 +16,8 @@ public class Main {
 		
 		piopio.volar(150);
 		
-		System.out.println(piopio.tenesHambre());
-		
-	}
+		System.out.println(piopio);
 
+		System.out.println(piopio.hayhambre());
+	}
 }
