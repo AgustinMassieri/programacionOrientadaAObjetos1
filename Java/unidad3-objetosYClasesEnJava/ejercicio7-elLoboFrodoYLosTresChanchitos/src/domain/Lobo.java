@@ -82,17 +82,6 @@ public class Lobo {
 		
 		setGrasa(nuevaGrasa);
 	}
-
-	public void comePersona(Persona persona){
-		double pesoDeLaPersona = persona.getPeso();
-		double grasaNueva = pesoDeLaPersona/10;
-		aumentarGrasa(grasaNueva);
-	}
-	
-	public void comerFruta(Fruta fruta){
-		double energiaDeLaFruta = fruta.darCalorias();
-		aumentarGrasa(energiaDeLaFruta);
-	}
 	
 	public void correr(int minutos) {
 		double grasaAConsumir = 2 * minutos; //2 gramos por minuto
