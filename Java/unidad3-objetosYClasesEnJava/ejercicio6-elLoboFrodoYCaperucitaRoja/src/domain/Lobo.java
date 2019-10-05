@@ -7,7 +7,7 @@ public class Lobo {
 	
 	@Override
 	public String toString() {
-		return "Lobo [grasa=" + grasa + ", estado=" + estado + "]";
+		return "Lobo [grasa=" + grasa + ", estado=" + estado + ", lugar = " + lugar + "]";
 	}
 
 	@Override
@@ -94,14 +94,24 @@ public class Lobo {
 		aumentarGrasa(energiaDeLaFruta);
 	}
 	
-	public void correr(int minutos) {
+	public boolean correr(int minutos) {
 		double grasaAConsumir = 2 * minutos; //2 gramos por minuto
-		disminuirGrasa(grasaAConsumir);
+		
+		if(grasa == 0) {
+			return false;
+		}
+		else {
+			disminuirGrasa(grasaAConsumir);
+			return true;
+		}
 	}
 	
 	public void correrA(Lugar lugar){
 		int distanciaACorrer = Lugar.obtenerDistanciaEntreLugares(this.lugar, lugar);
-		correr(distanciaACorrer);
+		
+		if(correr(distanciaACorrer)) {
+			this.lugar = lugar;
+		}
 	}
 	
 	public void imprimirEstado() {

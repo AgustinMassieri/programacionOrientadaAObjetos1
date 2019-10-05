@@ -3,13 +3,23 @@ package domain;
 public class Lugar {
 	private String nombre;
 	private int distancia;
-	
+
+	@Override
+	public String toString() {
+		return "Lugar [nombre=" + nombre + ", distancia=" + distancia + "]";
+	}
+
 	public static int obtenerDistanciaEntreLugares(Lugar lugarOrigen, Lugar lugarDestino) {
 		int distancia;
 		
 		distancia = Math.abs(lugarOrigen.getDistancia() - lugarDestino.getDistancia());
 		
 		return distancia;
+	}
+	
+	public Lugar(int distancia) {
+		this.nombre = null;
+		this.distancia = distancia;
 	}
 	
 	public Lugar(String nombre, int distancia) {

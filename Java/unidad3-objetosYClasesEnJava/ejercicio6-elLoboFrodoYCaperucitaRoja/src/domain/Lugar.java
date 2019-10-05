@@ -4,6 +4,11 @@ public class Lugar {
 	private String nombre;
 	private int distancia;
 	
+	@Override
+	public String toString() {
+		return "Lugar [nombre=" + nombre + ", distancia=" + distancia + "]";
+	}
+
 	public static int obtenerDistanciaEntreLugares(Lugar lugarOrigen, Lugar lugarDestino) {
 		int distancia;
 		

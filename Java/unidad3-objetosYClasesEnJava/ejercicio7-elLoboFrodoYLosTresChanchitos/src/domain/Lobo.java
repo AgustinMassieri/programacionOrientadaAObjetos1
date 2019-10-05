@@ -1,13 +1,12 @@
 package domain;
 
-public class Lobo {
+public class Lobo extends Animal{
 	private double grasa;
 	private Estado estado;
-	private Lugar lugar;
 	
 	@Override
 	public String toString() {
-		return "Lobo [grasa=" + grasa + ", estado=" + estado + "]";
+		return "Lobo [grasa=" + grasa + ", estado=" + estado + ", lugar="+ lugar +"]";
 	}
 
 	@Override
@@ -83,19 +82,36 @@ public class Lobo {
 		setGrasa(nuevaGrasa);
 	}
 	
-	public void correr(int minutos) {
+	public void soplarCasa(Casa casa){
+		int resistenciaDeLaCasa = casa.getResistencia();
+		int pesoDeLaCasa = casa.getPeso();
+		int grasaAPerder = resistenciaDeLaCasa + pesoDeLaCasa;
+		
+		disminuirGrasa(grasaAPerder);		
+	}
+	
+	public boolean correr(int minutos) {
 		double grasaAConsumir = 2 * minutos; //2 gramos por minuto
-		disminuirGrasa(grasaAConsumir);
+		
+		if(grasa == 0) {
+			return false;
+		}
+		else {
+			disminuirGrasa(grasaAConsumir);
+			return true;
+		}
 	}
 	
 	public void correrA(Lugar lugar){
 		int distanciaACorrer = Lugar.obtenerDistanciaEntreLugares(this.lugar, lugar);
-		correr(distanciaACorrer);
+		
+		if(correr(distanciaACorrer)) {
+			this.lugar = lugar;
+		}
 	}
 	
 	public void imprimirEstado() {
 		System.out.println("Estoy " + estado);
 	}
-	
 	
 }
