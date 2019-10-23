@@ -1,26 +1,43 @@
 package domain;
-
 import exceptions.*;
 
-public class ParseadorDeFecha{
+public class Fecha {
+	int dia;
+	int mes;
+	int año;
 	
-	public static void parsearFecha(String fecha) throws FormatoInvalidoDeFecha{
-		String [] partesDeLaFecha = fecha.split("/");
-		int dia;
-		int mes;
-		int año;
-
-		try{
-			dia = Integer.parseInt(partesDeLaFecha[0]);
-			mes = Integer.parseInt(partesDeLaFecha[1]);
-			año = Integer.parseInt(partesDeLaFecha[2]);
+	public Fecha(int dia, int mes, int año) throws FormatoInvalidoDeFecha{
+		if(esFechaValida(dia, mes, año)){
+			this.dia = dia;
+			this.mes = mes;
+			this.año = año;
 		}
-		catch(Exception cualquierExcepcion) {
+		else
 			throw new FormatoInvalidoDeFecha();
-		}
-		
-		if( !esFechaValida(dia, mes, año) )
-			throw new FormatoInvalidoDeFecha();	
+	}
+	
+	public int getDia() {
+		return dia;
+	}
+
+	public void setDia(int dia) {
+		this.dia = dia;
+	}
+
+	public int getMes() {
+		return mes;
+	}
+
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
+
+	public int getAño() {
+		return año;
+	}
+
+	public void setAño(int año) {
+		this.año = año;
 	}
 	
 	private static boolean esFechaValida(int dia, int mes, int año) {
@@ -34,11 +51,12 @@ public class ParseadorDeFecha{
 				if(!esAñoBisiesto(año) && dia <= 28)
 					esValida = true;
 			}
-			if(dia == 30 && (mes == 4 || mes == 6 || mes == 9 || mes == 11 ) )
-				esValida = true;
-			if(dia == 31 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) )
-				esValida = true;
 			
+			if(dia <= 30 && (mes == 4 || mes == 6 || mes == 9 || mes == 11 ) )
+				esValida = true;
+			if(dia <= 31 && (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) )
+				esValida = true;
+
 			
 		}
 	
@@ -80,5 +98,4 @@ public class ParseadorDeFecha{
 		
 		return esValido;
 	}
-	
 }

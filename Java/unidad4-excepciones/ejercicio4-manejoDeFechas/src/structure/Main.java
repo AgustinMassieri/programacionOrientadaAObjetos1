@@ -1,20 +1,21 @@
 package structure;
 
 import domain.*;
-import exceptions.FormatoInvalidoDeFecha;
+import exceptions.*;
 
 public class Main {
 
 	public static void main(String[] args) {
-		String fecha = "12/5/144";
-
-		try{
-			ParseadorDeFecha.parsearFecha(fecha);
+		
+		try {
+			Fecha nuevaFecha = new Fecha(1,2,3);
+			ManejadorDeFechas.parsearFecha("29/2/2016"); //Probamos con las fechas
+			
 		}
 		catch(Exception excepcion) {
 			System.out.println(excepcion.getMessage());
 		}
-		
+
 	}
 
 }

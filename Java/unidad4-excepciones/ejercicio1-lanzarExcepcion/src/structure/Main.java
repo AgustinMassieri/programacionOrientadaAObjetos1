@@ -1,6 +1,6 @@
 package structure;
 
-import domain.Calculadora;
+import domain.*;
 
 public class Main {
 
