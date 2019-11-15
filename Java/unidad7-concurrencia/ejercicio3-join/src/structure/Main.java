@@ -12,7 +12,7 @@ public class Main {
 		
 		try {
 			threadMensajeUno.join();
-			threadMensajeUno.join();
+			threadMensajeDos.join();
 		}
 		catch(InterruptedException excepcion) {
 			System.out.println(excepcion);
