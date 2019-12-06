@@ -1,3 +1,6 @@
+EJEMPLOS DE PATRONES DE DISEÑO
+------------------------------
+
 -Singleton: Un sistema donde hay una unica calculadora donde va guardando todos los resultados en su memoria y otras entidades quieren acceder a estos resultados.
 
 -Factory Method: Un juego donde queremos crear mas 'villanos' y no nos importa de que tipo es, sino que sencillamente nos cree uno.
@@ -10,4 +13,4 @@
 
 -Composite: Un sistema de archivos donde dentro de las carpetas puede haber archivos o simplemente mas carpetas.
 
--Decorator: 
+-Decorator: Un arma donde podemos agregarle un mejor cargador, o tambien un silenciador para dispararle a una lata.
