@@ -1,0 +1,13 @@
+-Singleton: Un sistema donde hay una unica calculadora donde va guardando todos los resultados en su memoria y otras entidades quieren acceder a estos resultados.
+
+-Factory Method: Un juego donde queremos crear mas 'villanos' y no nos importa de que tipo es, sino que sencillamente nos cree uno.
+
+-State: En una cuenta bancaria, donde dependiendo del estado de la cuenta, pueda realizar ciertas operaciones, o sencillamente que las operaciones las ejecute de manera distinta.
+
+-Observer: Una tienda que tenga muchos subscriptores y estos puedan recibir notificaciones cuando hay descuentos.
+
+-Strategy: Un sistema de ordenamiento donde emplee diferentes algoritmos.
+
+-Composite: Un sistema de archivos donde dentro de las carpetas puede haber archivos o simplemente mas carpetas.
+
+-Decorator: 
