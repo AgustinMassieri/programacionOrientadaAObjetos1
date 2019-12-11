@@ -1,5 +1,5 @@
 ﻿
-## Informacion
+## Leer
 Dejo estas paginas web para sacar información de los patrones de diseño:
 
  - [SourceMaking](https://sourcemaking.com/ )

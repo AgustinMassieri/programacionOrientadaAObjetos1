@@ -13,31 +13,6 @@ import domain.*;
 public class Main {
 
 	public static void main(String[] args) {
-		PrintWriter archivoCSV = null;
-		Alumno arregloDeAlumnos[] = {
-				new Alumno("Lucas","Saavedra", 20),
-				new Alumno("Alberto","Romaniquich", 36),
-				new Alumno("Roman","Riquelme",39),
-				new Alumno("Esteban","Echeverria",40),
-				new Alumno("Santos","Roca",19)
-		};
-		
-		try {
-			archivoCSV = new PrintWriter( new FileWriter("alumnos.csv") );
-		
-			
-			
-			
-			
-			
-		}
-		catch(Exception e) {
-			System.out.println(e);
-		}
-		
-	
-	
-	
 	}
 
 }
